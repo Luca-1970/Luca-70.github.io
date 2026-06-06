@@ -1,0 +1,379 @@
+@import url("https://fonts.googleapis.com/css2?family=Archivo+Black&family=Audiowide&family=Iosevka+Charon:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&family=Libre+Bodoni:ital,wght@0,400..700;1,400..700&family=Michroma&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=Outfit:wght@100..900&family=Playwrite+IN+Guides&family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=SN+Pro:ital,wght@0,200..900;1,200..900&family=Stardos+Stencil:wght@400;700&family=Unbounded:wght@200..900&display=swap");
+
+body {
+  margin: 0;
+
+  background-color: #0b0b0f;
+  background-image:
+    radial-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px),
+    radial-gradient(rgba(255, 255, 255, 0.06) 1px, transparent 1px);
+  background-size:18px 18px,36px 36px;    
+  background-position:0 0, 0 0;
+  color: #d3cfcf;
+  font-size: 14px;
+  font-family: "Outfit", sans-serif;
+}
+
+
+
+header { 
+  border-bottom: solid 1px #dad1d13f;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:hover {
+    color: white;
+}
+
+
+nav,footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+
+
+  & a#get-touch {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+   
+  }
+
+  & a#get-touch:hover {
+        color:white;     
+        
+       
+  }
+
+  & a#get-touch span:first-child {      /*  & significa: tutti gli <span> dentro l’elemento con id get-touch, si usa prevalentemente per creare:indicatori
+                                         bullet decorativi ecc  */
+    background-color: #212121;
+   /*  border-radius: 100%; */
+    border: solid 1px #dad1d13f;
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+    width: fit-content;
+    padding: 17px;
+    border-radius: 50%;
+  }
+
+  & svg {
+    height: 20px;
+    color: #8a8a8a;
+  }
+
+  & ul#social-desktop, ul#social-mobile  {
+    display: flex;
+    gap: 30px;
+
+    & li {
+    list-style: none; 
+    }
+  }
+
+    & ul#social-desktop {
+    display: none;
+  }
+} 
+
+/*  #social-desktop {  
+  display: flex;
+  gap: 30px;
+}
+
+ #social-mobile {   
+  display: none;
+}  */
+ 
+
+#container-avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+#container-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+#hero-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 40px;
+
+    & .by-luca {
+      margin-top: 20px;
+    }
+    
+    & h1 {
+      font-size: 40px;
+    }
+}
+
+#hero-section h1 span {
+  display: block;
+}
+
+& h1 {
+    font-size: 50px;
+}
+
+& #btn {
+      background-color: #212121;
+    border-radius: 10px;
+    border: solid 1px #dad1d13f;
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+    width: fit-content;
+    padding: 17px;
+    gap: 20px;
+    transition: all;   
+    transition-duration: .3s;
+    transition-timing-function: linear;
+}
+
+& #btn:hover {
+    scale: 0.9;
+    color: inherit;
+}
+
+footer {
+  align-items: center;
+}
+
+& svg {
+    height: 20px;
+    gap: 20px;
+}
+
+#logos-section {
+    background-color: #212121;    
+    border: solid 1px #dad1d13f;
+    height: 200px;
+    border-left: none;
+    border-right: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 40px;
+
+    & img {
+      height: 40px;
+    }
+}
+
+#services-section {
+    padding: 40px 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    & h2 {
+      margin-bottom: 80px;
+      padding: 0 30px;
+    }
+}
+
+ .conteiner-item {
+    display: grid;
+    grid-template-columns: repeat(2, 280px);
+    gap: 20px;
+
+   justify-content: center;
+}
+
+.grid-items {
+    background-color: #212121;
+    border: 1px solid #dad1d13f;
+    padding: 15px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#contact-section {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid #dad1d13f;
+  border-left: none;
+  border-right: none;
+  padding: 60px;
+
+  & h2 {
+    font-size: 35px;
+    margin-top: 0;
+  }
+
+}
+
+
+.testo-gradiente {
+  background-image: linear-gradient(45deg, #eee, #333 );/* questi 2 selettori servono a rendere la scritta h1 sfumata dal bianco verso lo scuro */
+  -webkit-background-clip: text;        /* questo selettore serve per lo stesso scopo del precedente è indicato per il testo */
+  -webkit-text-fill-color: transparent;  /* questo è per dargli un effetto al testo di trasparenza  */
+  -moz-background-clip: text;
+  -moz-text-fill-color:text      /* tutti e due per farlo vedere anche su mozilla */
+}
+
+@media screen and (max-width: 768px) {
+
+  /* NAV */
+  nav,
+  footer {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  /* SOCIAL: stessa logica del mobile ma meno estrema */
+  nav ul#social-desktop,
+  footer ul#social-desktop {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  nav ul#social-mobile,
+  footer ul#social-mobile {
+    display: none;
+  }
+
+  /* HERO */
+  #hero-section h1 {
+    font-size: 40px;
+    text-align: center;
+  }
+
+  /* LOGHI */
+  #logos-section {
+    flex-wrap: wrap;
+    height: auto;
+    gap: 20px;
+    padding: 20px;
+  }
+
+  /* CARD: da 2 colonne a 1 o 2 “fluide” */
+  .conteiner-item {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    padding: 0 20px;
+  }
+
+  /* CONTACT */
+  #contact-section {
+    padding: 50px 20px;
+  }
+
+  #contact-section h2 {
+    font-size: 30px;
+  }
+}
+ 
+@media screen and (max-width: 375px) {
+
+  /* NAVBAR */
+
+  nav,
+  footer {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  /* Nasconde social mobile */
+  ul#social-mobile {
+    display: none;
+  }
+
+  /* Mostra social desktop */
+  ul#social-desktop {
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    padding: 0;
+  }
+
+  /* HERO */
+
+  #hero-section h1 {
+    font-size: 32px;
+    text-align: center;
+    padding: 0 20px;
+  }
+
+  /* LOGHI */
+
+  #logos-section {
+    flex-wrap: wrap;
+    height: auto;
+    padding: 20px;
+    gap: 20px;
+  }
+
+  #logos-section img {
+    height: 30px;
+  }
+
+  /* CARD */
+
+  .conteiner-item {
+    grid-template-columns: 1fr;
+    width: 100%;
+  }
+
+  .grid-items {
+    width: 100%;
+  }
+
+  /* CONTACT */
+
+  #contact-section {
+    padding: 40px 20px;
+  }
+
+  #contact-section h2 {
+    font-size: 28px;
+  }
+}
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
